@@ -11,6 +11,7 @@ export async function getLocation(location) {
       actual: data.currentConditions.feelslike,
       wind: data.currentConditions.windspeed,
       humidity: data.currentConditions.humidity,
+      icon: data.currentConditions.icon,
     };
     return newData;
   } catch (err) {
