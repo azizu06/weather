@@ -5,22 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
   </head>
-  <body>
+  <body class="theme-clear-day">
     <div class="main">
-      <div class="search">
-        <input type="text" placeholder="Search a city" class="box" />
-      </div>
-      <div class="weather">
-        <h1 class="location">Orlando, Florida</h1>
-        <div class="info">
-          <h1 class="temp">76 °F</h1>
-          <div class="extras">
-            <h3 class="actual">Feels Like: 72 °F</h3>
-            <h3 class="wind">Wind 10 MPH</h3>
-            <h3 class="humid">Humidity: 95%</h3>
+      <main class="app" role="main">
+        <header class="topbar">
+          <div class="brand" aria-label="App title">
+            <span class="brand__title">Weather</span>
+            <span class="brand__subtitle">Forecast</span>
           </div>
-        </div>
-      </div>
+        </header>
+
+        <section class="search" aria-label="Search">
+          <label class="sr-only" for="search-input">Search for a city</label>
+          <div class="search__field">
+            <input id="search-input" type="text" placeholder="Search a city" class="box" />
+          </div>
+          <p class="search__hint">Press Enter to search</p>
+        </section>
+
+        <section class="card weather-card" aria-live="polite">
+          <h1 class="location">Orlando, Florida</h1>
+          <div class="info">
+            <div class="temp">76 °F</div>
+            <div class="extras">
+              <div class="actual">Feels Like: 72 °F</div>
+              <div class="wind">Wind: 10 MPH</div>
+              <div class="humid">Humidity: 95%</div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   </body>
 </html>
