@@ -23,14 +23,14 @@ export async function render(data) {
 }
 
 export function convertTemp(btn, temp1, temp2, temp) {
-  if (btn.innerText === '°C') {
+  if (btn.innerText === '°C' && !btn.classList.contains('active')) {
     const btnF = document.querySelector('.tempF');
     btn.classList.add('active');
     btnF.classList.remove('active');
     const celTemp = (temp - 32) * (5 / 9);
     temp1.innerText = `${Number(celTemp.toFixed(1))} °C`;
     temp2.innerText = `Feels Like: ${Number(celTemp.toFixed(1))} °C`;
-  } else {
+  } else if (btn.innerText === '°F' && !btn.classList.contains('active')) {
     const btnC = document.querySelector('.tempC');
     btn.classList.add('active');
     btnC.classList.remove('active');

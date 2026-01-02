@@ -187,19 +187,38 @@ body::before {
   justify-content: space-between;
 }
 
-.temps {
+.toggle {
   display: flex;
-  border-radius: 12px;
-  border: 3px solid black;
-  padding: 3px 6px;
-  gap: 5px;
+  align-items: center;
 }
 
-button {
-  padding: 4px 12px;
-  background-color: transparent;
-  font-size: 1.2rem;
+.temps {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.temps button {
+  padding: 6px 12px;
+  background: transparent;
+  font-size: 0.95rem;
   border: none;
+  border-radius: 999px;
+  color: var(--muted);
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.temps button:hover {
+  transform: translateY(-1px);
+  color: var(--text);
 }
 
 img {
@@ -213,9 +232,10 @@ img {
   gap: 50px;
 }
 
-.active {
-  background-color: black;
-  color: white;
+.temps .active {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2);
 }
 
 .card-title {
@@ -261,6 +281,7 @@ img {
   backdrop-filter: blur(var(--glass-blur));
   -webkit-backdrop-filter: blur(var(--glass-blur));
   box-shadow: var(--shadow);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .search__field:focus-within {
@@ -278,6 +299,10 @@ img {
   font-size: 1rem;
   color: var(--text);
   padding: 10px 8px;
+}
+
+.box:focus {
+  outline: none;
 }
 
 .box:focus-visible {
