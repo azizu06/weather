@@ -1,2 +1,4 @@
-# DynamicUI
-Creating a drop down menu along with an image carousel.
+# Weather
+Making a weather app to learn APIs and asynchronous code.
+
+
