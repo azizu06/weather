@@ -10,16 +10,26 @@ export default [
       ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
-        document: 'readonly',
         window: 'readonly',
-      },
-      env: {
-        browser: true,
+        document: 'readonly',
       },
     },
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'off',
+    },
+  },
+  {
+    files: ['webpack.config.js'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'commonjs',
+      globals: {
+        require: 'readonly',
+        process: 'readonly',
+        __dirname: 'readonly',
+        module: 'readonly',
+      },
     },
   },
 ];
