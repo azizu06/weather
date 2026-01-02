@@ -184,6 +184,33 @@ body::before {
 .topbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.temps {
+  display: flex;
+  border-radius: 12px;
+  border: 3px solid black;
+  padding: 3px 6px;
+  gap: 5px;
+}
+
+button {
+  padding: 4px 12px;
+  background-color: transparent;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.fahr,
+.cel {
+  background-color: black;
+  color: white;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
 }
 
 .brand {

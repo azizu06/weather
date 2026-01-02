@@ -12,3 +12,10 @@ search.addEventListener('keydown', async (e) => {
     return;
   }
 });
+
+async function init() {
+  const data = await getLocation('Orlando Florida');
+  render(data);
+}
+
+init();

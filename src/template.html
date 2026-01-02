@@ -13,6 +13,12 @@
             <span class="brand__title">Weather</span>
             <span class="brand__subtitle">Forecast</span>
           </div>
+          <div class="toggle">
+            <div class="temps">
+              <button class="cel">°C</button>
+              <button class="fahr">°F</button>
+            </div>
+          </div>
         </header>
 
         <section class="search" aria-label="Search">
@@ -24,13 +30,16 @@
         </section>
 
         <section class="card weather-card" aria-live="polite">
-          <h1 class="location">Orlando, Florida</h1>
+          <div class="card-title">
+            <h1 class="location"></h1>
+            <img src="#" class="wIcon" />
+          </div>
           <div class="info">
-            <div class="temp">76 °F</div>
+            <div class="temp"></div>
             <div class="extras">
-              <div class="actual">Feels Like: 72 °F</div>
-              <div class="wind">Wind: 10 MPH</div>
-              <div class="humid">Humidity: 95%</div>
+              <div class="actual"></div>
+              <div class="wind"></div>
+              <div class="humid"></div>
             </div>
           </div>
         </section>
