@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+
+.search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  gap: 25px;
+}
+
+.info {
+  display: flex;
+  gap: 50px;
+}
+
+input[type='text'] {
+  height: 40px;
+  width: 200px;
+  padding: 15px;
+}
+
+.extras {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.temp {
+  align-self: center;
+  font-size: 75px;
+}
